@@ -14,7 +14,8 @@ $factory->define(Product::class, function (Faker $faker) {
             return factory(App\User::class)->create()->id;
         },
         'name' => $faker->word,
-        'descr' => $faker->sentence(14),
+//        'descr' => $faker->sentence(14),
+        'descr' => $faker->realText($maxNbChars = 120),
         'price' => $faker->randomFloat(2,1, 100),
         'popular' => rand(1,8),
         'category_id' => function(){
