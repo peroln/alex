@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     $(".my-row").click(function(){
         var product = jQuery.parseJSON($(this).attr("data-product"));
         $(".modal-card-title").text(product.name);
